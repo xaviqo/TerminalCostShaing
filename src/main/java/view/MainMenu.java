@@ -1,5 +1,6 @@
 package view;
 
+import models.Event;
 import models.Persona;
 import net.je2sh.asciitable.JTable;
 import org.beryx.textio.TextIO;
@@ -50,34 +51,35 @@ public class MainMenu {
 
         do {
 
-
             UtilConsole.clearConsole();
+
+            //print info msg
             showUserInfo(theUser).forEach(System.out::println);
 
+            //print options menu
             mainMenuTable().forEach(System.out::println);
+
+            //line space
             System.out.println("");
 
-            switch (textIO.newIntInputReader().withMaxVal(5).read("Menú: ")) {
+            //main switch
+            switch (textIO.newIntInputReader().withMaxVal(3).read("Menú: ")) {
                 case 1:
-                    UserView.createUser(theUser);
+                    if (isConnected(theUser)){
+                        EventView.createEvent(new Event());
+                    } else {
+                        UserView.createUser(theUser);
+                    }
                     break;
                 case 2:
                     theUser = UserView.logIn(theUser);
-                    break;
-                case 3:
-                    if (isConnected(theUser)){
-
-                    } else {
-                        theUser.setUserStatusInfo(UserStatusInfo.NO_VALID);
-                    }
-                    break;
-                case 4:
                     break;
                 case 0:
                     System.out.println("Hasta pronto!");
                     loop = false;
                     break;
                 default:
+                    theUser.setUserStatusInfo(UserStatusInfo.NO_VALID);
                     break;
             }
         } while (loop);
@@ -89,18 +91,11 @@ public class MainMenu {
         JTable mainMenuTable;
 
         if (isConnected(theUser)){
+
             mainMenuTable = JTable.of()
                     .width(MAIN_MENU_W)
                     .row()
                     .col().width(COL_MENU_W).content("1").done()
-                    .col().content("CREAR USUARIO").done()
-                    .done()
-                    .row()
-                    .col().width(COL_MENU_W).content("2").done()
-                    .col().content("INICIAR SESIÓN").done()
-                    .done()
-                    .row()
-                    .col().width(COL_MENU_W).content("3").done()
                     .col().content("CREAR EVENTO").done()
                     .done()
                     .row()
@@ -108,6 +103,7 @@ public class MainMenu {
                     .col().content("SALIR").done()
                     .done();
         } else {
+
             mainMenuTable = JTable.of()
                     .width(MAIN_MENU_W)
                     .row()
