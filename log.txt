@@ -1,0 +1,212 @@
+Apr 09, 2022 8:09:08 PM dao.JsonManager <init>
+INFO: Creado archivo eventos.json
+Apr 09, 2022 8:09:08 PM dao.JsonManager <init>
+SEVERE: Error instanciando el FR y FW del archivo eventos.json
+Apr 09, 2022 8:09:08 PM dao.JsonManager load
+SEVERE: Error en el método load del archivo JSON eventos
+Apr 09, 2022 8:15:17 PM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 09, 2022 8:15:57 PM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 09, 2022 8:49:59 PM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 09, 2022 8:50:07 PM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:10:51 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:11:30 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:11:54 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:12:25 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:14:27 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:15:18 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:20:58 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:21:55 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 10:35:36 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 10:38:36 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:03:58 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:08:56 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:37:42 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:40:29 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:41:22 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:41:52 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:45:26 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:45:48 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:47:22 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:47:50 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:58:00 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:58:35 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 11:58:55 AM dao.JsonManager <init>
+INFO: Iniciados FR y FW del archivo eventos.json
+Apr 10, 2022 2:56:11 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 2:56:11 PM dao.DataManager <init>
+SEVERE: Error instanciando el FR y FW del archivo eventos.data | java.io.FileNotFoundException: /home/xavi/Desktop/DAW/class/M03_PROGRAMACION/UF5/CompartirPagos/src/data/eventos (No such file or directory)
+Apr 10, 2022 3:00:17 PM dao.DataManager <init>
+INFO: Creado archivo eventos
+Apr 10, 2022 3:00:17 PM dao.DataManager <init>
+SEVERE: Error instanciando el FR y FW del archivo eventos | java.io.EOFException
+Apr 10, 2022 3:00:17 PM dao.DataManager <init>
+INFO: Cargado eventos con exito
+Apr 10, 2022 3:02:53 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 3:02:53 PM dao.DataManager <init>
+SEVERE: Error instanciando el FR y FW del archivo eventos.data | java.io.EOFException
+Apr 10, 2022 3:02:53 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 3:07:42 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 3:08:01 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 3:11:04 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 3:11:07 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 3:11:26 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 3:11:26 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 3:11:45 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 3:11:51 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 3:16:17 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 3:16:17 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 3:16:17 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 3:16:32 PM dao.DataManager lambda$persistFile$0
+SEVERE: Error de escritura en eventos.data | java.io.IOException: Stream Closed
+Apr 10, 2022 3:16:32 PM dao.DataManager lambda$persistFile$0
+SEVERE: Error de escritura en eventos.data | java.io.IOException: Stream Closed
+Apr 10, 2022 5:14:39 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 5:14:39 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:14:55 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 5:14:55 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 5:14:55 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:15:52 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 5:15:52 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:16:22 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 5:16:32 PM dao.DataManager <init>
+INFO: Iniciados FR y FW del archivo eventos.data
+Apr 10, 2022 5:16:48 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:23:42 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 5:23:42 PM dao.DataManager loadFile
+SEVERE: Error instanciando el FIS/OIS deeventos.data | java.io.EOFException
+Apr 10, 2022 5:23:42 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:24:47 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 5:28:02 PM dao.DataManager <init>
+INFO: Creado archivo eventos.data
+Apr 10, 2022 5:28:02 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:28:18 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:28:36 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:29:00 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:29:16 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:29:38 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:31:11 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:31:17 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:31:30 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:47:57 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 10, 2022 5:48:14 PM dao.DataManager <init>
+INFO: Cargado eventos.data con exito
+Apr 11, 2022 12:57:55 AM dao.DataManager <init>
+INFO: Creado archivo persona.data
+Apr 11, 2022 12:57:55 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 12:58:37 AM dao.DataManager lambda$persistFile$0
+SEVERE: Error de escritura en persona.data | java.io.NotSerializableException: models.Persona
+Apr 11, 2022 12:59:54 AM dao.DataManager <init>
+INFO: Creado archivo persona.data
+Apr 11, 2022 12:59:54 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:02:50 AM dao.DataManager <init>
+INFO: Creado archivo persona.data
+Apr 11, 2022 1:02:50 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:06:39 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:09:45 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:13:11 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:18:54 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:22:30 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 1:26:35 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:13:25 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:19:40 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:20:39 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:21:34 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:47:30 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:50:29 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 2:57:15 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 3:17:03 AM dao.DataManager <init>
+INFO: Creado archivo checkPersona.data
+Apr 11, 2022 3:17:03 AM dao.DataManager <init>
+INFO: Cargado checkPersona.data con exito
+Apr 11, 2022 3:17:24 AM dao.DataManager <init>
+INFO: Cargado checkPersona.data con exito
+Apr 11, 2022 3:21:16 AM dao.DataManager <init>
+INFO: Cargado checkPersona.data con exito
+Apr 11, 2022 3:23:24 AM dao.DataManager <init>
+INFO: Creado archivo checkPersona.data
+Apr 11, 2022 3:23:24 AM dao.DataManager <init>
+INFO: Cargado checkPersona.data con exito
+Apr 11, 2022 3:23:51 AM dao.DataManager <init>
+INFO: Creado archivo persona.data
+Apr 11, 2022 3:23:51 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
+Apr 11, 2022 3:24:27 AM dao.DataManager <init>
+INFO: Cargado persona.data con exito
