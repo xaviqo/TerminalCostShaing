@@ -3,26 +3,43 @@ package models;
 import utils.Generator;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 public class Event implements Serializable {
 
     private static final long serialVersionUID = -3033776188345756312L;
 
     private String shareCode;
+    private String ownerCode;
     private String name;
     private float total;
     private List<Expense> expenseList;
-    private List<Persona> personasList;
-
+    private Map<Persona,Float> personaContribution;
 
     public Event() {
-        this.shareCode = Generator.stringRandom(5).toUpperCase(Locale.ROOT);
+        this.shareCode = Generator.stringRandom(6).toUpperCase(Locale.ROOT);
+        this.expenseList = new ArrayList<>();
+        this.personaContribution = new HashMap<>();
+    }
+
+    public void setShareCode(String shareCode) {
+        this.shareCode = shareCode;
     }
 
     public String getShareCode(){
         return shareCode;
+    }
+
+    public String getOwnerCode() {
+        return ownerCode;
+    }
+
+    public void setOwnerCode(String ownerCode) {
+        this.ownerCode = ownerCode;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
     }
 
     public String getName() {
@@ -37,11 +54,11 @@ public class Event implements Serializable {
         return total;
     }
 
-    public List<Expense> getSpendingsList() {
+    public List<Expense> getExpensesList() {
         return expenseList;
     }
 
-    public void addSpending(Expense expense) {
+    public void addExpense(Expense expense) {
 
         expenseList.add(expense);
         total = 0f;
@@ -53,11 +70,27 @@ public class Event implements Serializable {
 
     }
 
-    public List<Persona> getPersonasList() {
-        return personasList;
+    public Map<Persona,Float> getPersonas() {
+        return personaContribution;
     }
 
-    public void setPersonasList(Persona persona) {
-        personasList.add(persona);
+    public boolean containsPersona(Persona persona) {
+        return personaContribution.containsKey(persona);
+    }
+
+    public void setPersona(Persona persona,Float contribution) {
+            personaContribution.put(persona,contribution);
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "shareCode='" + shareCode + '\'' +
+                ", ownerCode='" + ownerCode + '\'' +
+                ", name='" + name + '\'' +
+                ", total=" + total +
+                ", expenseList=" + expenseList +
+                ", personasSet=" + personaContribution +
+                '}';
     }
 }

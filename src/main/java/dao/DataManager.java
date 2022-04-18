@@ -3,17 +3,17 @@ package dao;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 
-import static view.MainMenu.logger;
+import static view.MainMenuView.logger;
 
 public class DataManager<T> {
 
     private String fileName;
     private static final String ROOT_PATH = System.getProperty("user.dir") + "/src/main/java/data/";
     private static final String EXTENSION = ".data";
-    private List<T> dataList;
+    private Set<T> dataSet;
 
     private File file;
     private FileInputStream fileInputStream;
@@ -22,7 +22,7 @@ public class DataManager<T> {
     private ObjectOutputStream objectOutputStream;
 
 
-    public DataManager(String newFileName, List<T> dataList) {
+    public DataManager(String newFileName, Set<T> dataSet) {
 
         this.fileName = newFileName + EXTENSION;
 
@@ -39,7 +39,7 @@ public class DataManager<T> {
         }
 
         //Definimos tipo de lista
-        this.dataList = dataList;
+        this.dataSet = dataSet;
 
         //Primera Carga
         if (loadFile()) {
@@ -52,7 +52,7 @@ public class DataManager<T> {
 
     //Metodos CRUD
     public T save(T t) {
-        if (dataList.add(t)) {
+        if (dataSet.add(t)) {
             if (persistFile()) return t;
         }
         logger.log(Level.SEVERE, "Error en metodo save de " + fileName);
@@ -60,7 +60,7 @@ public class DataManager<T> {
     }
 
     public T delete(T t) {
-        if (dataList.remove(t)) {
+        if (dataSet.remove(t)) {
             if (persistFile()) return t;
         }
         logger.log(Level.SEVERE, "Error en metodo delete de " + fileName);
@@ -68,15 +68,15 @@ public class DataManager<T> {
     }
 
     public T update(T t) {
-        if (dataList.remove(t)) {
+        if (dataSet.remove(t)) {
             return save(t);
         }
         logger.log(Level.SEVERE, "Error en metodo update de " + fileName);
         return null;
     }
 
-    public List<T> getList() {
-        return dataList;
+    public Set<T> getSet() {
+        return dataSet;
     }
 
     //Metodos relacionados con los archivos, lectura y escritura
@@ -92,7 +92,7 @@ public class DataManager<T> {
 
         try {
             if (fileInputStream.available() > 0) {
-                while (fileInputStream.available() > 0) dataList.add((T) objectInputStream.readObject());
+                while (fileInputStream.available() > 0) dataSet.add((T) objectInputStream.readObject());
             }
             return true;
         } catch (IOException ioe) {
@@ -114,7 +114,7 @@ public class DataManager<T> {
             logger.log(Level.SEVERE, "Error instanciando el FOS/OOS de" + fileName + " | " + e);
         }
 
-        dataList.forEach((t -> {
+        dataSet.forEach((t -> {
             try {
                 objectOutputStream.writeObject(t);
             } catch (IOException e) {

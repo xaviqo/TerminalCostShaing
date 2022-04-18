@@ -210,3 +210,15 @@ Apr 11, 2022 3:23:51 AM dao.DataManager <init>
 INFO: Cargado persona.data con exito
 Apr 11, 2022 3:24:27 AM dao.DataManager <init>
 INFO: Cargado persona.data con exito
+Apr 12, 2022 12:52:19 AM view.MainMenuView getUserStatus
+WARNING: Error en método User Status, ninguna condición se ha cumplido
+Apr 12, 2022 1:55:40 PM dao.DataManager save
+SEVERE: Error en metodo save de persona.data
+Apr 12, 2022 1:55:40 PM dao.DataManager save
+SEVERE: Error en metodo save de event.data
+Apr 12, 2022 5:30:14 PM dao.DataManager save
+SEVERE: Error en metodo save de persona.data
+Apr 12, 2022 5:30:24 PM dao.DataManager save
+SEVERE: Error en metodo save de persona.data
+Apr 17, 2022 12:29:11 AM dao.DataManager lambda$persistFile$0
+SEVERE: Error de escritura en event.data | java.io.NotSerializableException: models.Expense

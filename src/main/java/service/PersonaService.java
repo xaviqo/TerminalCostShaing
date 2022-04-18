@@ -2,62 +2,61 @@ package service;
 
 import dao.DataManager;
 import models.Persona;
-import view.UserStatusInfo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class PersonaService implements CRUD<Persona> {
 
-    DataManager<Persona> personaDataManager = new DataManager<>("persona", new ArrayList<>());
+    DataManager<Persona> personaDataManager = new DataManager<>("persona", new HashSet<>());
 
     @Override
-    public boolean save(Persona checkPersona) {
-        return personaDataManager.save(checkPersona) != null;
+    public boolean save(Persona persona) {
+        persona.setConnected(false);
+        return personaDataManager.save(persona) != null;
     }
 
     @Override
-    public boolean delete(Persona checkPersona) {
-        return personaDataManager.delete(checkPersona) != null;
+    public boolean delete(Persona persona) {
+        return personaDataManager.delete(persona) != null;
     }
 
     @Override
-    public boolean update(Persona checkPersona) {
-        return personaDataManager.update(checkPersona) != null;
+    public boolean update(Persona persona) {
+        persona.setConnected(false);
+        return personaDataManager.update(persona) != null;
     }
 
     @Override
-    public List<Persona> getList() {
-        return personaDataManager.getList();
+    public Set<Persona> getSet() {
+        return personaDataManager.getSet();
     }
 
 
     /**
-     * @param userAvailable
+     * @param nameToCheck
      * @return true if username exists
      */
-    public boolean checkUserName(String userAvailable) {
+    public boolean checkUserName(String nameToCheck) {
 
-        for (Persona p : getList()) {
-            if (p.getUserName().equalsIgnoreCase(userAvailable.trim())) return true;
+        for (Persona p : getSet()) {
+            if (p.getUserName().equalsIgnoreCase(nameToCheck.trim())) return true;
         }
         return false;
 
     }
 
     //si NO lo encuentra, entonces getId es null
-    public Persona correctPassword(Persona checkPersona) {
+    public Persona correctPassword(Persona check) {
 
-        for (Persona p : getList()) {
-            if (p.getUserName().equalsIgnoreCase(checkPersona.getUserName())) {
-                if (p.getUserPass().equalsIgnoreCase(checkPersona.getUserPass())) {
-                    p.setUserStatusInfo(UserStatusInfo.CONNECTED);
+        for (Persona p : getSet()) {
+            if (p.getUserName().equalsIgnoreCase(check.getUserName())) {
+                if (p.getUserPass().equalsIgnoreCase(check.getUserPass())) {
+                    p.setConnected(true);
                     return p;
                 }
             }
         }
-        checkPersona.setUserStatusInfo(UserStatusInfo.BAD_USER_PASS);
-        return checkPersona;
+        return check;
     }
 
 }

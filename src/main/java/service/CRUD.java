@@ -1,10 +1,10 @@
 package service;
 
-import java.util.List;
+import java.util.Set;
 
 public interface CRUD<T> {
     public boolean save(T t);
     public boolean delete(T t);
     public boolean update(T t);
-    public List<T> getList();
+    public Set<T> getSet();
 }

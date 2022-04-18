@@ -1,11 +1,17 @@
 package models;
 
-public class Expense {
+import view.enums.ExpenseType;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class Expense implements Serializable {
 
     private String description;
     private float cost;
     private Persona persona;
     private ExpenseType expenseType;
+    private LocalDate date;
 
     public String getDescription() {
         return description;
@@ -31,11 +37,19 @@ public class Expense {
         this.persona = persona;
     }
 
-    public ExpenseType getSpendingType() {
+    public ExpenseType getExpenseType() {
         return expenseType;
     }
 
-    public void setSpendingType(ExpenseType expenseType) {
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setExpenseType(ExpenseType expenseType) {
         this.expenseType = expenseType;
     }
 }

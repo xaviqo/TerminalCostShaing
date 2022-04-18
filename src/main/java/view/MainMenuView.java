@@ -1,6 +1,7 @@
 package view;
 
 import models.Event;
+import models.Expense;
 import models.Persona;
 import net.je2sh.asciitable.JTable;
 import org.beryx.textio.TextIO;
@@ -19,15 +20,20 @@ import java.util.logging.SimpleFormatter;
 
 import static view.StatusInfoView.getUserStatus;
 
-public class MainMenu {
+public class MainMenuView {
 
     public static TextIO textIO = TextIoFactory.getTextIO();
     public static Logger logger = Logger.getLogger("xavi.compartirpagos");
     public static boolean showStatusInfo = false;
-    private static final int MAIN_MENU_W = 30;
-    private static final int COL_MENU_W = 1;
+    public static final int MAIN_W = 55;
+    public static final int COL_MENU_W = 1;
+
+    public static final int COL_W = 10;
     public static final String IS_INFO_OK = "Los datos son correctos?";
     public static Persona theUser = new Persona();
+    public static Event theEvent = new Event();
+
+    public static Expense theExpense = new Expense();
 
     public static EventService eventService = new EventService();
     public static PersonaService personaService = new PersonaService();
@@ -80,7 +86,7 @@ public class MainMenu {
             System.out.println("");
 
             //main switch
-            switch (textIO.newIntInputReader().withMaxVal(3).read("Menú: ")) {
+            switch (textIO.newIntInputReader().withMinVal(0).withMaxVal(4).read("Menú: ")) {
                 case 1:
                     if (theUser.isConnected()) {
                         EventMenuView.createEvent(new Event());
@@ -128,7 +134,7 @@ public class MainMenu {
 
             //IF USER IS LOGGED IN
             return JTable.of()
-                    .width(MAIN_MENU_W)
+                    .width(MAIN_W)
                     .row()
                     .col().width(COL_MENU_W).content("1").done()
                     .col().content("CREAR EVENTO").done()
@@ -149,7 +155,7 @@ public class MainMenu {
         } else {
 
             return JTable.of()
-                    .width(MAIN_MENU_W)
+                    .width(MAIN_W)
                     .row()
                     .col().width(COL_MENU_W).content("1").done()
                     .col().content("CREAR USUARIO").done()
@@ -172,7 +178,7 @@ public class MainMenu {
         //TODO: desarrollar con info de balance, eventos a medias...
 
         return JTable.of()
-                .width(MAIN_MENU_W + 1)
+                .width(MAIN_W + 1)
                 .row()
                 .col().content(getUserStatus(theUser.getUserStatusInfo())).done()
                 .done().render();

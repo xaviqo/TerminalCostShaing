@@ -1,10 +1,10 @@
 package models;
 
 import utils.Generator;
-import view.UserStatusInfo;
+import view.enums.StatusInfo;
 
 import java.io.Serializable;
-import java.util.Locale;
+import java.util.*;
 
 public class Persona implements Serializable {
 
@@ -15,20 +15,23 @@ public class Persona implements Serializable {
     private String userName;
     private String userPass;
     private float balance;
-    private UserStatusInfo userStatusInfo;
+    private boolean connected;
+    private StatusInfo statusInfo;
+    private Set<String> eventsIdSet;
 
     public Persona() {
         this.id = Generator.stringRandom(8).toUpperCase(Locale.ROOT);
         this.balance = 0f;
-        this.userStatusInfo = UserStatusInfo.BOOT_USER_MSG;
+        this.statusInfo = StatusInfo.BOOT_USER_MSG;
+        this.eventsIdSet = new HashSet<>();
     }
 
-    public UserStatusInfo getUserStatusInfo() {
-        return userStatusInfo;
+    public StatusInfo getUserStatusInfo() {
+        return statusInfo;
     }
 
-    public void setUserStatusInfo(UserStatusInfo userStatusInfo) {
-        this.userStatusInfo = userStatusInfo;
+    public void setUserStatusInfo(StatusInfo statusInfo) {
+        this.statusInfo = statusInfo;
     }
 
     public void setId(String id) {
@@ -59,6 +62,14 @@ public class Persona implements Serializable {
         return userPass;
     }
 
+    public boolean isConnected() {
+        return connected;
+    }
+
+    public void setConnected(boolean connected) {
+        this.connected = connected;
+    }
+
     public void setUserPass(String userPass) {
         this.userPass = userPass;
     }
@@ -71,6 +82,29 @@ public class Persona implements Serializable {
         this.balance = balances;
     }
 
+    public Set<String> getEvents() {
+        return eventsIdSet;
+    }
+
+    public void setEvents(String eventId) {
+        this.eventsIdSet.add(eventId);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Persona persona = (Persona) o;
+
+        return id.equals(persona.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
 
     @Override
     public String toString() {
@@ -80,6 +114,9 @@ public class Persona implements Serializable {
                 ", userName='" + userName + '\'' +
                 ", userPass='" + userPass + '\'' +
                 ", balance=" + balance +
+                ", connected=" + connected +
+                ", statusInfo=" + statusInfo +
+                ", eventsIdSet=" + eventsIdSet +
                 '}';
     }
 }
